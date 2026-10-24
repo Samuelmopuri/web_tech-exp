@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Details</title>
+</head>
+<body>
+
+    <h2>Student Details</h2>
+    <h3>Register No: URK24CS1129</h3>
+
+    <div id="result"></div>
+
+    <script>
+        let students = [
+            { name: "John", regno: "UR13CS129", year: 1999 },
+            { name: "Sam", regno: "URK24CS1129", year: 2006 },
+            { name: "David", regno: "UR15CS145", year: 2001 }
+        ];
+
+        let output = "";
+
+        for (let i = 0; i < students.length; i++) {
+            output += students[i].name + "'s Register Number is "
+                    + students[i].regno + "<br>";
+
+            if (students[i].year < 2000) {
+                output += "Born before 2000<br><br>";
+            } else {
+                output += "Born in or after 2000<br><br>";
+            }
+        }
+
+        document.getElementById("result").innerHTML = output;
+    </script>
+
+</body>
+</html>

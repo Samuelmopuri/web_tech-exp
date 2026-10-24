@@ -1,0 +1,48 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Move Car</title>
+
+    <style>
+        #car {
+            position: absolute;
+            left: 0px;
+            top: 150px;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Car Movement</h2>
+    <h3>Register No: URK24CS1129</h3>
+
+    <button onclick="moveCar()">Move</button>
+    <button onclick="stopCar()">Stop</button>
+
+    <br><br>
+
+    <img id="car" src="car.png" alt="Car" width="100">
+
+    <script>
+        let position = 0;
+        let timer;
+
+        function moveCar() {
+            if (!timer) {
+                timer = setInterval(function() {
+                    position += 5;
+                    document.getElementById("car").style.left = position + "px";
+                }, 100);
+            }
+        }
+
+        function stopCar() {
+            clearInterval(timer);
+            timer = null;
+        }
+    </script>
+
+</body>
+</html>

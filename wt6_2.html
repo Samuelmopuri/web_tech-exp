@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Background Colour Change</title>
+</head>
+<body>
+
+    <h2>Background Colour Changer</h2>
+    <h3>Register No: URK24CS1129</h3>
+
+    <script>
+        let colors = ["red", "blue", "yellow", "green", "pink"];
+        let i = 0;
+
+        function changeColor() {
+            document.body.style.backgroundColor = colors[i];
+            i = (i + 1) % colors.length;
+        }
+
+        setInterval(changeColor, 3000);
+    </script>
+
+</body>
+</html>

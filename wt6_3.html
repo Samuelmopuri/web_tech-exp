@@ -1,0 +1,29 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Font Size Change</title>
+</head>
+<body>
+
+    <h2>Register No: URK24CS1129</h2>
+
+    <p id="para"
+       onmouseover="increaseSize()"
+       onmouseout="decreaseSize()">
+       Move the mouse over this paragraph to increase
+       the font size and move it away to decrease it.
+    </p>
+
+    <script>
+        function increaseSize() {
+            document.getElementById("para").style.fontSize = "30px";
+        }
+
+        function decreaseSize() {
+            document.getElementById("para").style.fontSize = "16px";
+        }
+    </script>
+
+</body>
+</html>
